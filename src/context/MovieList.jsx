@@ -1,7 +1,17 @@
 import React from "react";
+import userContext from "./userContext";
+import MovieRow from "./MovieRow";
 
 function MovieList(props) {
-  return <div className="container">Movie List</div>;
+  return (
+    <userContext.Consumer>
+      {(userContext) => (
+        <div className="container">
+          Movie List {userContext.currentUser} <MovieRow />
+        </div>
+      )}
+    </userContext.Consumer>
+  );
 }
 
 export default MovieList;
