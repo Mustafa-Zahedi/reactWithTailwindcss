@@ -7,7 +7,9 @@ function MovieList(props) {
     <userContext.Consumer>
       {(userContext) => (
         <div className="container">
-          Movie List {userContext.currentUser} <MovieRow />
+          Movie List{" "}
+          {userContext.currentUser ? userContext.currentUser.name : ""}{" "}
+          <MovieRow />
         </div>
       )}
     </userContext.Consumer>
