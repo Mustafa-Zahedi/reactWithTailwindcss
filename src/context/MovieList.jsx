@@ -2,13 +2,13 @@ import React from "react";
 import userContext from "./userContext";
 import MovieRow from "./MovieRow";
 
-function MovieList(props) {
+function MovieList() {
   return (
     <userContext.Consumer>
       {(userContext) => (
         <div className="container">
           Movie List{" "}
-          {userContext.currentUser ? userContext.currentUser.name : ""}{" "}
+          {userContext.currentUser ? userContext.currentUser.name : ""}
           <MovieRow />
         </div>
       )}
